@@ -1,0 +1,62 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Открытие файлов по кнопкам</title>
+  </head>
+  <body>
+    <button onclick="openFile(1)">Открыть файл 1</button>
+    <button onclick="openFile(2)">Открыть файл 2</button>
+    <button onclick="openFile(3)">Открыть файл 3</button>
+    <button onclick="openFile(4)">Открыть файл 4</button>
+    <button onclick="openFile(5)">Открыть файл 5</button>
+    <button onclick="openFile(6)">Открыть файл 6</button>
+
+    <div id="fileContent"></div>
+
+    <script>
+      function openFile(fileNumber) {
+        fetch(`file${fileNumber}.html`)
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('fileContent').innerHTML = data;
+          })
+          .catch(error => console.error('Ошибка загрузки файла:', error));
+      }
+    </script>
+  </body>
+</html> -->
+
+<!-- ШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШШ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Открытие файлов по кнопкам без JavaScript</title>
+  </head>
+  <body>
+    <button onclick="document.getElementById('fileFrame').src = 'file1.html'">
+      Открыть файл 1
+    </button>
+    <button onclick="document.getElementById('fileFrame').src = 'file2.html'">
+      Открыть файл 2
+    </button>
+    <button onclick="document.getElementById('fileFrame').src = 'file3.html'">
+      Открыть файл 3
+    </button>
+    <button onclick="document.getElementById('fileFrame').src = 'file4.html'">
+      Открыть файл 4
+    </button>
+    <button onclick="document.getElementById('fileFrame').src = 'file5.html'">
+      Открыть файл 5
+    </button>
+    <button onclick="document.getElementById('fileFrame').src = 'file6.html'">
+      Открыть файл 6
+    </button>
+
+    <iframe id="fileFrame" width="100%" height="500px" src=""></iframe>
+  </body>
+</html>
