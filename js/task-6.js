@@ -12,3 +12,9 @@ function destroyBoxes() {
     box.style.margin = `${defaultBoxMargin}px`;
   });
 }
+// ------- created 31 03 24 -----------------------------
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
